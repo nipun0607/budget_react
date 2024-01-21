@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { createContext } from "react";
 
-//todo: create Context here
+
 const BudgetContexts = createContext({});
 
 const BudgetContext = (props) => {

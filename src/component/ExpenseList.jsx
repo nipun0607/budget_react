@@ -6,12 +6,12 @@ const ExpenseList = (props) => {
 
     const { expenseList,setExpenseList } = useBudget(); //* contextAPI
 
-    //todo: Set in local storage when expenseList has values
+    
     if (expenseList.length !== 0) {
         localStorage.setItem('expenses', JSON.stringify([...expenseList]));
     } 
     
-    //todo: useEffect function for get data from local storage
+   
     useEffect(() => {
         const storedExpenses = JSON.parse(localStorage.getItem('expenses'));
         if (storedExpenses) {
@@ -19,7 +19,7 @@ const ExpenseList = (props) => {
         }
     }, []);
 
-    //todo: function for deleting expenses
+ 
     const deleteExpense = (idx, expenseCost) =>{
         props.spentAmountDel(expenseCost);
         const newExpenseList = [...expenseList];
@@ -28,7 +28,7 @@ const ExpenseList = (props) => {
         localStorage.setItem('expenses', JSON.stringify([...newExpenseList]));
     }
     
-    //todo: render Data
+
   return (
     <div className='expenseList'>
         <h2>Expense List</h2>
