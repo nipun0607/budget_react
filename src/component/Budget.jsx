@@ -40,10 +40,18 @@ const Budget = () => {
     setSpent((prevSpent) => parseInt(prevSpent) - parseInt(deletedExpenseCost));
     setRemaining((prevRemaining) => parseInt(prevRemaining) + parseInt(deletedExpenseCost));
   }
+  const heading = {
+    color: 'blue',
+    fontSize: '2rem',
+    backgroundColor: 'lightgray',
+    padding: '10px',
+    borderRadius: '5px',
+    fontWeight:'1.5rem'
+  };
 
   return (
     <>
-      <nav>My Budget Planner</nav>
+      <nav style={heading}>My Budget Planner</nav>
       <main>
         <div className="budget">
           <p>Budget : 2000</p>

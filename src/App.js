@@ -1,5 +1,6 @@
 import Budget from './component/Budget';
 import BudgetContext from './context/BudgetContext';
+import './App.css'
 
 function App() {
   return (
